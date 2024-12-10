@@ -1,4 +1,4 @@
-import Nav from "./components/nav";
+import Nav from "./components/Nav";
 import AboutMe from "./components/AboutMe";
 import Project from "./components/Project";
 import Skills from "./components/Skills";
@@ -11,16 +11,16 @@ function App() {
         <header>
           <Nav />
         </header>
-        <section className="flex flex-col my-[50px] items-center">
+        <section className="flex flex-col my-[60px] items-center">
           <AboutMe />
         </section>
-        <section className="mt-10">
+        <section className="mt-[5rem]">
           <Project />
         </section>
-        <section className="mt-10">
+        <section className="mt-[7rem]">
           <Skills />
         </section>
-        <footer className="mt-10">
+        <footer className="mt-20">
           <Contacts />
         </footer>
       </div>
