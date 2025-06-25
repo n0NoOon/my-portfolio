@@ -4,7 +4,7 @@ export default function Contacts() {
       <div className="flex justify-center">
         <h1>Contacts</h1>
       </div>
-      <div>
+      <div className="">
         <div className="flex gap-3">
           <h2>Email:</h2>
           <p>sitthipat.w@gmail.com</p>
@@ -15,7 +15,7 @@ export default function Contacts() {
         </div>
         <div className="flex gap-3">
           <h2>Resume:</h2>
-          <a href="">
+          <a href="" target="_blank">
             <p>Click here!</p>
           </a>
         </div>

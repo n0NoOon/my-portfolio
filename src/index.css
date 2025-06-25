@@ -2,10 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-@layer components{
-    body {
-        @apply bg-black text-white
-    }
+@layer components {
+  body {
+    @apply bg-black text-white;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
 }

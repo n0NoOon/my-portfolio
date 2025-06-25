@@ -6,24 +6,22 @@ import Contacts from "./components/Contacts";
 
 function App() {
   return (
-    <div className="h-screen">
-      <div className="container mx-auto px-20">
-        <header>
-          <Nav />
-        </header>
-        <section className="flex flex-col my-[60px] items-center">
-          <AboutMe />
-        </section>
-        <section className="mt-[5rem]">
-          <Project />
-        </section>
-        <section className="mt-[7rem]">
-          <Skills />
-        </section>
-        <footer className="mt-20">
-          <Contacts />
-        </footer>
-      </div>
+    <div className="px-10">
+      <section>
+        <Nav />
+      </section>
+      <section className="flex flex-col items-center">
+        <AboutMe />
+      </section>
+      <section className="flex flex-col mt-[5rem]">
+        <Project />
+      </section>
+      <section className="mt-[7rem]">
+        <Skills />
+      </section>
+      <footer className="my-20">
+        <Contacts />
+      </footer>
     </div>
   );
 }

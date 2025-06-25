@@ -5,17 +5,18 @@ import {
   SiTailwindcss,
   SiHtml5,
   SiCss3,
-  SiVite,
   SiGit,
+  SiPostgresql,
+  SiPython,
 } from "react-icons/si";
 
 export default function Skills() {
   return (
-    <div>
-      <div className="flex justify-center my-5 font-bold">
+    <div className="flex flex-col">
+      <div className="flex justify-center my-10 font-bold">
         <h1>Skills / Technologies</h1>
       </div>
-      <div className="flex flex-rows gap-5 justify-center">
+      <div className="flex flex-rows gap-5 justify-center flex-wrap">
         <div className="p-4 rounded hover:bg-slate-500 hover:text-red-500">
           <SiHtml5 size={40} />
         </div>
@@ -37,8 +38,11 @@ export default function Skills() {
         <div className="p-4 rounded hover:bg-gray-500 hover:text-blue-500">
           <SiTailwindcss size={40} color="" />
         </div>
+        <div className="p-4 rounded hover:bg-gray-500 hover:text-blue-500">
+          <SiPostgresql size={40} color="" />
+        </div>
         <div className="p-4 rounded hover:bg-gray-500 hover:text-yellow-500">
-          <SiVite size={40} color="" />
+          <SiPython size={40} color="" />
         </div>
       </div>
     </div>
