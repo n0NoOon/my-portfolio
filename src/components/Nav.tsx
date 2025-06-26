@@ -1,9 +1,11 @@
-import { MdNightsStay, MdSunny } from "react-icons/md";
+import { IoMenu } from "react-icons/io5";
 
 export default function Nav() {
-  const box = () => {
+  const menu = () => {
     return (
       <div>
+        <IoMenu />
+
         <div>Home</div>
         <div>Project</div>
         <div>Contact</div>

@@ -81,7 +81,7 @@ export default function Skills() {
   const [selected, setSelected] = useState<string | null>(null);
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col" id="skills">
       <div className="flex justify-center my-10 font-bold">
         <h1>Skills / Technologies</h1>
       </div>
