@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import {
   SiTypescript,
   SiJavascript,
@@ -79,9 +79,25 @@ const skills = [
 
 export default function Skills() {
   const [selected, setSelected] = useState<string | null>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        containerRef.current &&
+        !containerRef.current.contains(event.target as Node)
+      ) {
+        setSelected(null);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
-    <div className="flex flex-col" id="skills">
+    <div className="flex flex-col" id="skills" ref={containerRef}>
       <div className="flex justify-center my-10 font-bold">
         <h1 className="border-b-2">Skills / Technologies</h1>
       </div>
@@ -89,7 +105,11 @@ export default function Skills() {
         {skills.map((skill) => (
           <div key={skill.key} className="flex flex-col items-center relative">
             <button
-              className={`p-4 rounded hover:bg-slate-500 ${skill.className}`}
+              className={`p-4 rounded hover:bg-slate-500 ${skill.className} ${
+                selected === skill.key
+                  ? "ring-4 ring-blue-400 bg-slate-700"
+                  : ""
+              }`}
               onClick={() =>
                 setSelected(selected === skill.key ? null : skill.key)
               }
