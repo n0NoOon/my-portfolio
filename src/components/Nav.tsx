@@ -1,5 +1,16 @@
 import { useState, useEffect } from "react";
 
+function scrollToCenter(id: string) {
+  const el = document.getElementById(id);
+  if (el) {
+    const rect = el.getBoundingClientRect();
+    const scrollTop = window.scrollY || window.pageYOffset;
+    const offset =
+      rect.top + scrollTop - window.innerHeight / 2 + rect.height / 2;
+    window.scrollTo({ top: offset, behavior: "smooth" });
+  }
+}
+
 export default function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
   const [collapsed, setCollapsed] = useState(false);
@@ -12,6 +23,12 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleNavClick = (e: React.MouseEvent, id: string) => {
+    e.preventDefault();
+    setShowMenu(false);
+    scrollToCenter(id);
+  };
+
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
@@ -21,19 +38,31 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto flex items-center justify-between p-4">
         <div className="text-xl font-bold">My Portfolio</div>
         {/* Desktop Menu */}
-        <ul className={`hidden md:flex space-x-8`}>
+        <ul className="hidden md:flex space-x-8">
           <li>
-            <a href="#about-me" className="hover:text-blue-300">
+            <a
+              href="#about-me"
+              onClick={(e) => handleNavClick(e, "about-me")}
+              className="hover:text-blue-300"
+            >
               About me
             </a>
           </li>
           <li>
-            <a href="#projects" className="hover:text-blue-300">
+            <a
+              href="#projects"
+              onClick={(e) => handleNavClick(e, "projects")}
+              className="hover:text-blue-300"
+            >
               Projects
             </a>
           </li>
           <li>
-            <a href="#contact" className="hover:text-blue-300">
+            <a
+              href="#contact"
+              onClick={(e) => handleNavClick(e, "contact")}
+              className="hover:text-blue-300"
+            >
               Contact
             </a>
           </li>
@@ -65,17 +94,29 @@ export default function Navbar() {
       {showMenu && (
         <ul className="md:hidden bg-blue-700 px-4 pb-4 space-y-2">
           <li>
-            <a href="#about-me" className="block py-2 hover:text-blue-300">
+            <a
+              href="#about-me"
+              onClick={(e) => handleNavClick(e, "about-me")}
+              className="block py-2 hover:text-blue-300 w-full text-left"
+            >
               About me
             </a>
           </li>
           <li>
-            <a href="#projects" className="block py-2 hover:text-blue-300">
+            <a
+              href="#projects"
+              onClick={(e) => handleNavClick(e, "projects")}
+              className="block py-2 hover:text-blue-300 w-full text-left"
+            >
               Projects
             </a>
           </li>
           <li>
-            <a href="#contact" className="block py-2 hover:text-blue-300">
+            <a
+              href="#contact"
+              onClick={(e) => handleNavClick(e, "contact")}
+              className="block py-2 hover:text-blue-300 w-full text-left"
+            >
               Contact
             </a>
           </li>

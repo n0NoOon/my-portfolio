@@ -1,17 +1,6 @@
-import { useRef } from "react";
-
 export default function Project() {
-  const projectRef = useRef<HTMLDivElement | null>(null);
-  const scrollToProject = () => {
-    projectRef.current?.scrollIntoView();
-  };
-
   return (
-    <div
-      ref={projectRef}
-      id="projects"
-      className="flex flex-col content-center"
-    >
+    <div id="projects" className="flex flex-col content-center mt-[5rem]">
       <div className="flex justify-center">
         <h1 className="font-bold">Projects</h1>
       </div>

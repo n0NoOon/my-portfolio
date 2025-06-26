@@ -87,7 +87,7 @@ export default function Skills() {
       </div>
       <div className="flex flex-row gap-5 justify-center flex-wrap">
         {skills.map((skill) => (
-          <div key={skill.key} className="flex flex-col items-center">
+          <div key={skill.key} className="flex flex-col items-center relative">
             <button
               className={`p-4 rounded hover:bg-slate-500 ${skill.className}`}
               onClick={() =>
@@ -98,8 +98,9 @@ export default function Skills() {
             </button>
             <div className="flex justify-center">{skill.label}</div>
             {selected === skill.key && (
-              <div className="mt-2 text-sm text-center bg-gray-800 p-2 rounded">
-                {skill.info}
+              <div className="absolute top-20 left-1/2 -translate-x-1/2 z-10 w-48 bg-gray-800 p-3 rounded shadow-lg transition-all duration-200">
+                <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-0 h-0 border-l-8 border-r-8 border-b-8 border-l-transparent border-r-transparent border-b-gray-800"></div>
+                <div className="text-sm text-center">{skill.info}</div>
               </div>
             )}
           </div>
