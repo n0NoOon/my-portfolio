@@ -1,8 +1,8 @@
 export default function Project() {
   return (
     <div id="projects" className="flex flex-col content-center mt-[5rem]">
-      <div className="flex justify-center">
-        <h1 className="font-bold">Projects</h1>
+      <div className="flex justify-center font-bold">
+        <h1 className="border-b-2">Projects</h1>
       </div>
       <div className="flex gap-10 lg:justify-center">
         <div className="flex flex-col md:flex-row gap-5 mt-10">

@@ -1,16 +1,16 @@
 export default function AboutMe() {
   return (
     <div id="about-me" className="flex flex-col items-center mt-20">
-      <div className="flex gap-3">
+      <div className="flex gap-8">
         <div>
           <img
-            src="/images/face.jpg"
+            src="/images/profile.jpeg"
             alt="FACE"
-            width="50px"
+            width="60px"
             className="rounded-full"
           />
         </div>
-        <div className="content-center">
+        <div className="content-center font-semibold">
           <p className="text-center">Sitthipat Wisesrawd</p>
           <p className="text-center">Nont</p>
         </div>

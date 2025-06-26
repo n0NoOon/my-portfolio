@@ -83,7 +83,7 @@ export default function Skills() {
   return (
     <div className="flex flex-col" id="skills">
       <div className="flex justify-center my-10 font-bold">
-        <h1>Skills / Technologies</h1>
+        <h1 className="border-b-2">Skills / Technologies</h1>
       </div>
       <div className="flex flex-row gap-5 justify-center flex-wrap">
         {skills.map((skill) => (
