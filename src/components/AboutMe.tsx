@@ -4,7 +4,7 @@ export default function AboutMe() {
       <div className="flex gap-8">
         <div>
           <img
-            src="/images/profile.jpeg"
+            src={import.meta.env.BASE_URL + "images/profile.jpeg"}
             alt="FACE"
             width="60px"
             className="rounded-full"
