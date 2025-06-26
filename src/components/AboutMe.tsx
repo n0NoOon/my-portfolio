@@ -1,6 +1,6 @@
 export default function AboutMe() {
   return (
-    <div className="flex flex-col items-center mt-10">
+    <div id="about-me" className="flex flex-col items-center mt-20">
       <div className="flex gap-3">
         <div>
           <img

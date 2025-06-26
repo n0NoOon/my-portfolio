@@ -1,6 +1,6 @@
 export default function Contacts() {
   return (
-    <div>
+    <div id="contact">
       <div className="flex justify-center">
         <h1>Contacts</h1>
       </div>

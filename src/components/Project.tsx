@@ -7,7 +7,11 @@ export default function Project() {
   };
 
   return (
-    <div ref={projectRef} id="project" className="flex flex-col content-center">
+    <div
+      ref={projectRef}
+      id="projects"
+      className="flex flex-col content-center"
+    >
       <div className="flex justify-center">
         <h1 className="font-bold">Projects</h1>
       </div>
