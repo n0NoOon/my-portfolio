@@ -12,7 +12,8 @@ export default function AboutMe() {
         </div>
         <div className="content-center font-semibold">
           <p className="text-center">Sitthipat Wisesrawd</p>
-          <p className="text-center">Nont</p>
+          <p className="text-center border-b-2 pb-1 mb-1 ">Nont</p>
+          <p className="text-center">Full-Stack Developer</p>
         </div>
       </div>
       <div className="flex flex-wrap mt-3 pt-10">

@@ -4,7 +4,7 @@
 
 @layer components {
   body {
-    @apply bg-black text-white;
+    @apply bg-[#2a2a2a] text-[#f9f5ed];
   }
   html {
     scroll-behavior: smooth;
