@@ -24,13 +24,13 @@ export default function Nav() {
             })
           }
         >
-          Home
+          About Me
         </button>
         <a href="#project">
           <button className="nav-btn">Projects</button>
         </a>
         <a href="#skills">
-          <button className="nav-btn">skills</button>
+          <button className="nav-btn">Skills</button>
         </a>
         <button
           className="nav-btn"

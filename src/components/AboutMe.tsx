@@ -18,9 +18,9 @@ export default function AboutMe() {
       <div className="flex flex-wrap mt-3 pt-10">
         <p className="container text-center w-auto">
           I'm a former cook, who decide to change his carreer from Food industry
-          to tech. I'm looking forward to become full-stack developer which led
-          me to seeking more oppotunities to improve myself as well as my skills
-          to achive my goals.
+          to Tech industry. I'm looking forward to become full-stack developer
+          which led me to seeking more oppotunities to improve myself as well as
+          my skills to achive my goals.
         </p>
       </div>
     </div>
